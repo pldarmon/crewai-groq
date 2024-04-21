@@ -11,12 +11,14 @@ def main():
     st.sidebar.title('Customization')
     model = st.sidebar.selectbox(
         'Choose a model',
-        ['mixtral-8x7b-32768', 'llama2-70b-4096']
+        ['mixtral-8x7b-32768', 
+         'llama2-70b-4096', 
+         'Llama3-8b-8192']
     )
 
     llm = ChatGroq(
             temperature=0, 
-            groq_api_key = st.secrets["GROQ_API_KEY"], 
+            groq_api_key = st.secrets["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"], 
             model_name=model
         )
 
